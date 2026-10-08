@@ -1,0 +1,67 @@
+/* Position (left/top) comes from the parent via className. */
+.laptop {
+  position: absolute;
+  width: 191.25px;
+  height: 115.11px;
+  border-radius: 8px;
+}
+
+.laptop__body {
+  left: 16.51px;
+  top: -2px;
+  width: 158.23px;
+  height: 103.56px;
+}
+
+.laptop__screen-light {
+  position: absolute;
+  left: 30px;
+  top: 13px;
+  width: 131px;
+  height: 74px;
+  background: var(--color-aqua);
+  border-radius: 5px;
+}
+
+.laptop__brand-dot {
+  left: 86.37px;
+  top: 40.44px;
+  width: 18.51px;
+  height: 18.67px;
+}
+
+.laptop__base {
+  left: 0;
+  top: 99.56px;
+  width: 191.25px;
+  height: 15.56px;
+}
+
+.laptop__screen-label {
+  position: absolute;
+  left: 36px;
+  top: 34px;
+  font-family: var(--font-display);
+  font-size: var(--text-laptop);
+  line-height: normal;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+/* Figma: Laptop — On click ⇄ State=On (Smart Animate, Ease in and out, 400ms) */
+.laptop__screen-light,
+.laptop__brand-dot,
+.laptop__screen-label {
+  transition: opacity var(--duration-toggle) var(--ease-in-out);
+}
+
+.laptop__screen-light,
+.laptop__screen-label,
+.laptop[data-on] .laptop__brand-dot {
+  opacity: 0;
+}
+
+.laptop[data-on] .laptop__screen-light,
+.laptop[data-on] .laptop__screen-label {
+  opacity: 1;
+}

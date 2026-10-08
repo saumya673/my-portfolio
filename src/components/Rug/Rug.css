@@ -1,0 +1,57 @@
+.rug {
+  position: absolute;
+  left: 100px;
+  top: 820px;
+  width: 760px;
+  height: 120px;
+  overflow: hidden;
+  background: var(--color-rug);
+  border: var(--stroke-4) solid var(--color-ink);
+  border-radius: 10px;
+}
+
+/* Children are offset by the 4px rug border (Figma measures from the outer edge). */
+.rug__border {
+  position: absolute;
+  border-style: solid;
+}
+
+.rug__border--outer {
+  left: 4px;
+  top: 4px;
+  width: 744px;
+  height: 104px;
+  border-width: var(--stroke-4);
+  border-color: var(--color-orange);
+  border-radius: 7px;
+}
+
+.rug__border--inner {
+  left: 16px;
+  top: 16px;
+  width: 720px;
+  height: 80px;
+  border-width: var(--stroke-2);
+  border-color: var(--color-cream);
+  border-radius: 5px;
+}
+
+/* 40px squares turned 45°, centred every 120px starting at (90, 68.28) on the rug. */
+.rug__diamond {
+  position: absolute;
+  left: calc(66px + var(--diamond-index) * 120px);
+  top: 44.28px;
+  width: 40px;
+  height: 40px;
+  border: var(--stroke-2) solid var(--color-ink);
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+.rug__diamond--orange {
+  background: var(--color-orange);
+}
+
+.rug__diamond--cream {
+  background: var(--color-cream);
+}

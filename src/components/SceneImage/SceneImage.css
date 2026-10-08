@@ -1,0 +1,7 @@
+.scene-image {
+  position: absolute;
+  display: block;
+  max-width: none;
+  user-select: none;
+  pointer-events: none;
+}

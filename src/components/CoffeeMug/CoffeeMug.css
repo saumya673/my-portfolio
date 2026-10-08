@@ -1,0 +1,110 @@
+/* Position (left/top) comes from the parent via className. */
+.coffee-mug {
+  position: absolute;
+}
+
+.coffee-mug__body,
+.coffee-mug__rim {
+  position: absolute;
+  border-style: solid;
+  border-color: var(--color-ink);
+}
+
+.coffee-mug__body {
+  border-width: var(--stroke-4);
+}
+
+.coffee-mug__rim {
+  border-width: var(--stroke-3);
+}
+
+/*
+ * Figma: Desk Mug Steam / Side-table Mug Steam — While hovering → State=Rise
+ * (Smart Animate, Slow, 1250ms). Every steam line moves up 6px to 45% opacity.
+ */
+.coffee-mug__steam {
+  transition:
+    transform var(--duration-spring-slow) var(--ease-spring-slow),
+    opacity var(--duration-spring-slow) var(--ease-spring-slow);
+}
+
+.coffee-mug[data-active] .coffee-mug__steam {
+  transform: translateY(-6px);
+  opacity: 0.45;
+}
+
+/* ---- Desk mug ---- */
+.coffee-mug--desk {
+  width: 60px;
+  height: 72px;
+}
+
+.coffee-mug--desk .coffee-mug__body {
+  left: 5px;
+  top: 12px;
+  width: 44px;
+  height: 45px;
+  background: var(--color-aqua);
+  border-radius: 4px 4px 8px 8px;
+}
+
+.coffee-mug--desk .coffee-mug__rim {
+  left: 3px;
+  top: 8px;
+  width: 48px;
+  height: 10px;
+  background: var(--color-wall);
+  border-radius: 4px;
+}
+
+.coffee-mug--desk .coffee-mug__handle {
+  left: 44px;
+  top: 20px;
+  width: 16px;
+  height: 24px;
+}
+
+.coffee-mug--desk .coffee-mug__steam {
+  left: 8px;
+  top: -19.25px;
+  width: 39.25px;
+  height: 23.25px;
+}
+
+/* ---- Side-table mug ---- */
+.coffee-mug--side-table {
+  width: 56px;
+  height: 58px;
+}
+
+.coffee-mug--side-table .coffee-mug__body {
+  left: 4px;
+  top: 10px;
+  width: 38px;
+  height: 38px;
+  background: var(--color-cream);
+  border-radius: 4px 4px 8px 8px;
+}
+
+.coffee-mug--side-table .coffee-mug__rim {
+  left: 2px;
+  top: 6px;
+  width: 42px;
+  height: 9px;
+  background: var(--color-cream-dark);
+  border-radius: 3px;
+}
+
+.coffee-mug--side-table .coffee-mug__handle {
+  left: 38px;
+  top: 16px;
+  width: 14px;
+  height: 20px;
+}
+
+.coffee-mug--side-table .coffee-mug__steam {
+  left: 6px;
+  top: -17px;
+  width: 33px;
+  height: 19px;
+}

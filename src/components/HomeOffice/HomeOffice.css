@@ -1,0 +1,18 @@
+/* The group box itself is transparent and must not swallow pointer events. */
+.home-office {
+  position: absolute;
+  left: 940px;
+  top: 300px;
+  width: 480px;
+  height: 724px;
+  pointer-events: none;
+}
+
+.home-office > * {
+  pointer-events: auto;
+}
+
+.home-office__mug {
+  left: 38px;
+  top: 228px;
+}

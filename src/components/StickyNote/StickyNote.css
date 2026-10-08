@@ -1,0 +1,68 @@
+/* Position (left/top) comes from the parent via className. */
+.sticky-note {
+  position: absolute;
+  width: 64px;
+  height: 48px;
+  border-radius: 4px;
+  transition:
+    transform var(--duration-toggle) var(--ease-in-out),
+    filter var(--duration-toggle) var(--ease-in-out);
+}
+
+.sticky-note__paper {
+  position: absolute;
+  inset: 0;
+  background: var(--note-color);
+  border: var(--stroke-3) solid var(--color-ink);
+  border-radius: 4px;
+}
+
+.sticky-note--orange {
+  --note-color: var(--color-orange);
+}
+
+.sticky-note--cream {
+  --note-color: var(--color-cream);
+}
+
+.sticky-note--sky {
+  --note-color: var(--color-sky);
+}
+
+.sticky-note__label {
+  position: absolute;
+  left: 5px;
+  top: 16px;
+  font-family: var(--font-display);
+  font-size: var(--text-sticky-note);
+  line-height: normal;
+  color: var(--color-ink);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--duration-toggle) var(--ease-in-out);
+}
+
+.sticky-note__pin {
+  left: 27px;
+  top: -3px;
+  width: 10px;
+  height: 10px;
+}
+
+/* Figma variant State=Lifted: everything rises 4px with a drop shadow. */
+@media (hover: hover) {
+  .sticky-note:hover {
+    transform: translateY(-4px);
+    filter: var(--shadow-sticky-note-lifted);
+  }
+}
+
+.sticky-note:focus-visible {
+  transform: translateY(-4px);
+  filter: var(--shadow-sticky-note-lifted);
+}
+
+/* Figma variant State=Revealed: the label fades in. */
+.sticky-note[data-revealed] .sticky-note__label {
+  opacity: 1;
+}

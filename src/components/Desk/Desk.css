@@ -1,0 +1,46 @@
+/* Positioned inside HomeOffice (origin = office group top-left). */
+.desk {
+  position: absolute;
+  left: 0;
+  top: 280px;
+  width: 460px;
+  height: 168px;
+}
+
+.desk__surface {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 460px;
+  height: 22px;
+  background: var(--color-wood);
+  border: var(--stroke-4) solid var(--color-ink);
+  border-radius: 4px;
+}
+
+.desk__leg {
+  position: absolute;
+  top: 18px;
+  width: 18px;
+  height: 150px;
+  background: var(--color-wood-dark);
+  border: var(--stroke-4) solid var(--color-ink);
+}
+
+.desk__leg--left {
+  left: 20px;
+}
+
+.desk__leg--right {
+  left: 422px;
+}
+
+.desk__crossbar {
+  position: absolute;
+  left: 20px;
+  top: 110px;
+  width: 420px;
+  height: 12px;
+  background: var(--color-wood-dark);
+  border: var(--stroke-3) solid var(--color-ink);
+}

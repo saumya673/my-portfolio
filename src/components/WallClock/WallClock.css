@@ -1,0 +1,97 @@
+.wall-clock {
+  position: absolute;
+  left: 460px;
+  top: 80px;
+  width: 110px;
+  height: 110px;
+}
+
+.wall-clock__face {
+  left: 0;
+  top: 0;
+  width: 110px;
+  height: 110px;
+}
+
+.wall-clock__tick {
+  position: absolute;
+  background: var(--color-ink);
+  border-radius: 2px;
+}
+
+.wall-clock__tick--top,
+.wall-clock__tick--bottom {
+  left: 51px;
+  width: 8px;
+  height: 14px;
+}
+
+.wall-clock__tick--top {
+  top: 8px;
+}
+
+.wall-clock__tick--bottom {
+  top: 88px;
+}
+
+.wall-clock__tick--left,
+.wall-clock__tick--right {
+  top: 51px;
+  width: 14px;
+  height: 8px;
+}
+
+.wall-clock__tick--left {
+  left: 8px;
+}
+
+.wall-clock__tick--right {
+  left: 88px;
+}
+
+.wall-clock__hour-hand {
+  position: absolute;
+  left: 51px;
+  top: 32px;
+  width: 6px;
+  height: 30px;
+  background: var(--color-ink);
+  border-radius: 3px;
+}
+
+/* Pivot is the layer origin, exactly as Figma rotates it. */
+.wall-clock__minute-hand {
+  position: absolute;
+  left: 70px;
+  top: 38px;
+  width: 5px;
+  height: 24px;
+  background: var(--color-orange);
+  border-radius: 3px;
+  transform-origin: 0 0;
+  transform: rotate(60deg);
+  transition: transform var(--duration-spring-quick) var(--ease-spring-quick);
+}
+
+/* Figma: Clock Hands — While hovering → State=Tick (Smart Animate, Quick, 744ms) */
+.wall-clock[data-active] .wall-clock__minute-hand {
+  transform: rotate(52deg);
+}
+
+.wall-clock__center {
+  left: 48px;
+  top: 48px;
+  width: 14px;
+  height: 14px;
+}
+
+.wall-clock__hanger {
+  position: absolute;
+  left: 50px;
+  top: -12px;
+  width: 10px;
+  height: 16px;
+  background: var(--color-wood);
+  border: var(--stroke-2) solid var(--color-ink);
+  border-radius: 2px;
+}

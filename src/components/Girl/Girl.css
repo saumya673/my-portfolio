@@ -1,0 +1,177 @@
+/*
+ * Figma component "Girl" (Rest / Wave). Image boxes include the half-stroke
+ * padding baked into each exported SVG, so they sit 1–2px outside the layer bounds.
+ */
+.girl {
+  position: absolute;
+  left: 109px;
+  top: 502px;
+  width: 401px;
+  height: 448px;
+  overflow: hidden;
+}
+
+.girl__face {
+  left: 139.89px;
+  top: 26px;
+  width: 121.22px;
+  height: 122.22px;
+}
+
+.girl__hair-top {
+  left: 137.67px;
+  top: 14.56px;
+  width: 125.67px;
+  height: 70.44px;
+}
+
+.girl__hair-left,
+.girl__hair-right {
+  top: 73.67px;
+  width: 22.56px;
+  height: 77.01px;
+}
+
+.girl__hair-left {
+  left: 129.58px;
+}
+
+.girl__hair-right {
+  left: 248.85px;
+}
+
+.girl__eye {
+  top: 84px;
+  width: 12.34px;
+  height: 12.44px;
+}
+
+.girl__eye--left {
+  left: 174.28px;
+}
+
+.girl__eye--right {
+  left: 214.38px;
+}
+
+.girl__smile {
+  left: 174.32px;
+  top: 110.5px;
+  width: 52.35px;
+  height: 13.89px;
+}
+
+.girl__neck {
+  left: 198.5px;
+  top: 144.22px;
+  width: 4px;
+  height: 38.22px;
+}
+
+.girl__dress {
+  left: 142.98px;
+  top: 175.33px;
+  width: 115.05px;
+  height: 165.78px;
+}
+
+.girl__leg {
+  top: 337.11px;
+  width: 130.47px;
+  height: 81.78px;
+}
+
+.girl__leg--left {
+  left: 78.2px;
+}
+
+.girl__leg--right {
+  left: 192.33px;
+}
+
+.girl__upper-arm {
+  left: 198.5px;
+  top: 162.89px;
+  width: 96.54px;
+  height: 38.22px;
+}
+
+.girl__resting-arm {
+  left: 115.22px;
+  top: 200.22px;
+  width: 87.28px;
+  height: 150.22px;
+}
+
+.girl__laptop {
+  left: 104.88px;
+  top: 255.11px;
+}
+
+/* ---- Wave (Figma: Girl — While hovering → State=Wave, Smart Animate, Slow, 1250ms) ---- */
+
+.girl__forearm,
+.girl__hand,
+.girl__wave-line {
+  transition:
+    transform var(--duration-spring-slow) var(--ease-spring-slow),
+    opacity var(--duration-spring-slow) var(--ease-spring-slow);
+}
+
+/*
+ * The forearm is a straight 4px round-capped stroke from the elbow (293.04, 164.89).
+ * Rest: to (320.80, 80.89). Wave: to (335.04, 76) — steeper angle, ~11% longer.
+ * Drawn as a rotated bar so the change can be animated with transform alone.
+ */
+.girl__forearm {
+  position: absolute;
+  left: 291.04px;
+  top: 162.89px;
+  width: 92.47px;
+  height: 4px;
+  background: var(--color-ink);
+  border-radius: 2px;
+  transform-origin: 2px 2px;
+  transform: rotate(-71.72deg) scaleX(1);
+}
+
+.girl[data-active] .girl__forearm {
+  transform: rotate(-64.74deg) scaleX(1.11);
+}
+
+.girl__hand {
+  left: 310.05px;
+  top: 59.17px;
+  width: 24.59px;
+  height: 24.78px;
+}
+
+.girl[data-active] .girl__hand {
+  transform: translate(12.45px, -5.67px);
+}
+
+.girl__wave-line--1 {
+  left: 344.23px;
+  top: 54.75px;
+  width: 10.09px;
+  height: 36.72px;
+}
+
+.girl__wave-line--2 {
+  left: 361.19px;
+  top: 39.19px;
+  width: 13.83px;
+  height: 64.72px;
+}
+
+.girl__wave-line--3 {
+  left: 287.93px;
+  top: 42.31px;
+  width: 9.44px;
+  height: 27.39px;
+}
+
+.girl[data-active] .girl__wave-line {
+  transform: translateX(7px);
+  opacity: 0.55;
+}

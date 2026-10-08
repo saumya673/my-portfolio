@@ -1,0 +1,76 @@
+/*
+ * Design tokens pulled from the Figma file "Portfolio" (Main Frame, node 5:2).
+ * Scene geometry stays in each component's CSS as raw px: it is illustration
+ * coordinates on the 1440 × 1024 artboard, not a spacing system.
+ */
+:root {
+  /* ---- Colors ---- */
+  --color-ink: #1a1a1a;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --color-wall: #3a6f7d;
+  --color-wall-dark: #2a5260;
+  --color-aqua: #5bb8c9;
+  --color-sky: #a8d8e0;
+
+  --color-orange: #f28c28;
+  --color-orange-dark: #e07a1a;
+  --color-rug: #c05b2b;
+
+  --color-wood: #8b5e3c;
+  --color-wood-dark: #7a5030;
+  --color-floor: #c8936a;
+  --color-floor-grain: #b07d54;
+
+  --color-cream: #fffde7;
+  --color-cream-dark: #e0e0c0;
+  --color-lamp-glow: #fff3c4;
+  --color-monitor-stand: #2a2a2a;
+
+  --color-stage-background: #1e1e1e;
+
+  /* ---- Typography ---- */
+  --font-display: var(--font-jacques-francois), "Jacques Francois", Georgia, serif;
+  --text-bubble: 40px;
+  --text-monitor: 22px;
+  --text-laptop: 18px;
+  --text-sticky-note: 13px;
+
+  /* ---- Strokes ---- */
+  --stroke-2: 2px;
+  --stroke-3: 3px;
+  --stroke-4: 4px;
+  --stroke-5: 5px;
+
+  /* ---- Scene ---- */
+  --scene-width: 1440px;
+  --scene-height: 1024px;
+  /* How far wall/floor extend past the artboard to fill letterboxing. */
+  --scene-bleed: 3000px;
+
+  /* ---- Shadows ---- */
+  --shadow-sticky-note-lifted: drop-shadow(0 5px 7px rgb(0 0 0 / 0.25));
+
+  /*
+   * ---- Motion ----
+   * Figma prototype transitions are all Smart Animate. Its spring presets are
+   * reproduced with linear() curves sampled from the same spring physics:
+   *   Slow   = mass 1, stiffness 80,  damping 20 (settles in 1250ms)
+   *   Quick  = mass 1, stiffness 300, damping 20 (settles in 744ms)
+   *   Gentle = mass 1, stiffness 100, damping 15 (settles in 1022ms)
+   */
+  --ease-spring-slow: linear(0, 0.047, 0.149, 0.267, 0.382, 0.487, 0.578, 0.655, 0.719, 0.772, 0.815, 0.851, 0.879, 0.903, 0.922, 0.937, 0.949, 0.959, 0.967, 0.973, 0.978, 0.983, 0.986, 0.989, 0.991, 0.993, 0.994, 0.995, 0.996, 0.997, 0.998, 0.998, 1);
+  --ease-spring-quick: linear(0, 0.069, 0.231, 0.432, 0.63, 0.802, 0.936, 1.028, 1.082, 1.106, 1.107, 1.094, 1.074, 1.052, 1.031, 1.014, 1.002, 0.994, 0.99, 0.988, 0.989, 0.991, 0.993, 0.995, 0.997, 0.999, 1, 1.001, 1.001, 1.001, 1.001, 1.001, 1);
+  --ease-spring-gentle: linear(0, 0.043, 0.147, 0.28, 0.42, 0.553, 0.672, 0.772, 0.852, 0.913, 0.958, 0.99, 1.01, 1.022, 1.027, 1.028, 1.027, 1.024, 1.02, 1.016, 1.012, 1.009, 1.006, 1.004, 1.002, 1.001, 1, 1, 0.999, 0.999, 0.999, 0.999, 1);
+  --ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+
+  --duration-spring-slow: 1250ms;
+  --duration-spring-quick: 744ms;
+  --duration-spring-gentle: 1022ms;
+  --duration-toggle: 400ms;
+
+  /* ---- Focus ---- */
+  --focus-ring: 4px solid var(--color-cream);
+  --focus-ring-offset: 4px;
+}

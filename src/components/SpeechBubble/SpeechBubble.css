@@ -1,0 +1,47 @@
+.speech-bubble {
+  position: absolute;
+  left: 398px;
+  top: 226px;
+  width: 482px;
+  height: 302px;
+}
+
+/* The bubble outline image includes 2px of stroke outside the shape's bounds. */
+.speech-bubble__shape {
+  left: 4.41px;
+  top: 5.73px;
+  width: 473.15px;
+  height: 290.51px;
+  transform-origin: 2px 2px;
+}
+
+.speech-bubble__text {
+  position: absolute;
+  left: 55.67px;
+  top: 47.11px;
+  width: 353.5px;
+  font-family: var(--font-display);
+  font-size: var(--text-bubble);
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-black);
+  transform-origin: 0 0;
+}
+
+.speech-bubble__line {
+  display: block;
+}
+
+/* Figma: 05 Bubble — While hovering → State=Float (Smart Animate, Slow, 1250ms): rises and tilts 3°. */
+.speech-bubble__shape,
+.speech-bubble__text {
+  transition: transform var(--duration-spring-slow) var(--ease-spring-slow);
+}
+
+.speech-bubble[data-active] .speech-bubble__shape {
+  transform: translate(7.53px, -18.59px) rotate(3deg);
+}
+
+.speech-bubble[data-active] .speech-bubble__text {
+  transform: translate(3.93px, -15.53px) rotate(3deg);
+}

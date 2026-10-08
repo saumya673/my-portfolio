@@ -1,0 +1,40 @@
+/*
+ * The artboard is 1440 wide, but every layer here bleeds outward by
+ * --scene-bleed so letterboxed screens show more wall and floor instead of
+ * empty bars. The stage clips anything past the viewport.
+ */
+.room-backdrop > * {
+  position: absolute;
+  left: calc(var(--scene-bleed) * -1);
+  width: calc(var(--scene-width) + var(--scene-bleed) * 2);
+}
+
+.room-backdrop__wall {
+  top: calc(var(--scene-bleed) * -1);
+  height: calc(680px + var(--scene-bleed));
+  background: var(--color-wall);
+}
+
+.room-backdrop__baseboard {
+  top: 660px;
+  height: 18px;
+  background: var(--color-wall-dark);
+  border: var(--stroke-3) solid var(--color-ink);
+}
+
+.room-backdrop__floor {
+  top: 678px;
+  height: calc(346px + var(--scene-bleed));
+  background: var(--color-floor);
+}
+
+/* Seven 2px grain lines, 40px apart, from y = 720 to y = 960. */
+.room-backdrop__floor-grain {
+  top: 718px;
+  height: 242px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--color-floor-grain) 0 var(--stroke-2),
+    transparent var(--stroke-2) 40px
+  );
+}

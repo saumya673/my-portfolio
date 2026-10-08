@@ -1,0 +1,76 @@
+.room-window {
+  position: absolute;
+  left: 72px;
+  top: 60px;
+  width: 336px;
+  height: 288px;
+}
+
+/* Children of the frame are offset by the 5px border (Figma measures from the outer edge). */
+.room-window__frame {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 320px;
+  height: 280px;
+  background: var(--color-sky);
+  border: var(--stroke-5) solid var(--color-ink);
+  border-radius: 8px;
+}
+
+.room-window__sun {
+  left: 155px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+}
+
+.room-window__clouds {
+  position: absolute;
+  left: 15px;
+  top: 25px;
+  width: 280px;
+  height: 90px;
+}
+
+.room-window__clouds-image {
+  inset: 0;
+  width: 280px;
+  height: 90px;
+  transition: transform var(--duration-spring-slow) var(--ease-spring-slow);
+}
+
+/* Figma: Clouds — While hovering → State=Drift (Smart Animate, Slow, 1250ms) */
+.room-window__clouds[data-active] .room-window__clouds-image {
+  transform: translateX(6px);
+}
+
+.room-window__bar {
+  position: absolute;
+  background: var(--color-ink);
+}
+
+.room-window__bar--horizontal {
+  left: -5px;
+  top: 125px;
+  width: 320px;
+  height: 10px;
+}
+
+.room-window__bar--vertical {
+  left: 150px;
+  top: -5px;
+  width: 10px;
+  height: 280px;
+}
+
+.room-window__sill {
+  position: absolute;
+  left: 0;
+  top: 274px;
+  width: 336px;
+  height: 14px;
+  background: var(--color-wood);
+  border: var(--stroke-4) solid var(--color-ink);
+  border-radius: 3px;
+}

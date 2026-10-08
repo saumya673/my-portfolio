@@ -1,0 +1,7 @@
+/* Positioned inside HomeOffice. The chair back rises 60px above the frame's top (y 310). */
+.office-chair {
+  left: 120px;
+  top: 250px;
+  width: 220px;
+  height: 260px;
+}

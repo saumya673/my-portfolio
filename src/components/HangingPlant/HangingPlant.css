@@ -1,0 +1,135 @@
+.hanging-plant {
+  position: absolute;
+  left: 1246px;
+  top: 0;
+  width: 120px;
+  height: 300px;
+}
+
+.hanging-plant__string {
+  position: absolute;
+  left: 56px;
+  top: 0;
+  width: 4px;
+  height: 60px;
+  background: var(--color-ink);
+}
+
+.hanging-plant__pot {
+  position: absolute;
+  left: 30px;
+  top: 55px;
+  width: 60px;
+  height: 50px;
+  background: var(--color-orange);
+  border: var(--stroke-4) solid var(--color-ink);
+  border-radius: 4px 4px 10px 10px;
+}
+
+.hanging-plant__pot-rim {
+  position: absolute;
+  left: 24px;
+  top: 52px;
+  width: 72px;
+  height: 12px;
+  background: var(--color-orange-dark);
+  border: var(--stroke-4) solid var(--color-ink);
+  border-radius: 4px;
+}
+
+.hanging-plant__leaves {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 120px;
+  height: 220px;
+}
+
+/*
+ * Leaves rotate around their layer origin (top-left), matching Figma.
+ * --leaf-rest / --leaf-sway are the Rest and Sway variant angles.
+ */
+.hanging-plant__leaf {
+  position: absolute;
+  background: var(--leaf-color);
+  border: var(--stroke-3) solid var(--color-ink);
+  border-radius: 50%;
+  transform-origin: 0 0;
+  transform: rotate(var(--leaf-rest));
+  transition: transform var(--duration-spring-gentle) var(--ease-spring-gentle);
+}
+
+/* Figma: Plant — While hovering → State=Sway (Smart Animate, spring m1 k100 d15, 1022ms) */
+.hanging-plant[data-active] .hanging-plant__leaf {
+  transform: rotate(var(--leaf-sway));
+}
+
+.hanging-plant__leaf--1 {
+  left: 30px;
+  top: 20px;
+  width: 30px;
+  height: 70px;
+  --leaf-color: var(--color-wall);
+  --leaf-rest: -20deg;
+  --leaf-sway: -15deg;
+}
+
+.hanging-plant__leaf--2 {
+  left: 58px;
+  top: 10px;
+  width: 30px;
+  height: 80px;
+  --leaf-color: var(--color-aqua);
+  --leaf-rest: 10deg;
+  --leaf-sway: 5deg;
+}
+
+.hanging-plant__leaf--3 {
+  left: 75px;
+  top: 35px;
+  width: 28px;
+  height: 65px;
+  --leaf-color: var(--color-wall);
+  --leaf-rest: 30deg;
+  --leaf-sway: 35deg;
+}
+
+.hanging-plant__leaf--4 {
+  left: 10px;
+  top: 60px;
+  width: 28px;
+  height: 65px;
+  --leaf-color: var(--color-aqua);
+  --leaf-rest: -35deg;
+  --leaf-sway: -40deg;
+}
+
+.hanging-plant__leaf--5 {
+  left: 42px;
+  top: 90px;
+  width: 30px;
+  height: 75px;
+  --leaf-color: var(--color-wall);
+  --leaf-rest: 5deg;
+  --leaf-sway: 10deg;
+}
+
+.hanging-plant__leaf--6 {
+  left: 70px;
+  top: 100px;
+  width: 26px;
+  height: 60px;
+  --leaf-color: var(--color-aqua);
+  --leaf-rest: 25deg;
+  --leaf-sway: 20deg;
+}
+
+.hanging-plant__leaf--7 {
+  left: 15px;
+  top: 120px;
+  width: 28px;
+  height: 60px;
+  --leaf-color: var(--color-wall);
+  --leaf-rest: -15deg;
+  --leaf-sway: -10deg;
+}

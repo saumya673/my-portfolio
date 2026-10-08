@@ -1,0 +1,32 @@
+/* Positioned inside HomeOffice. */
+.pinboard {
+  position: absolute;
+  left: 240px;
+  top: -5px;
+  width: 220px;
+  height: 60px;
+}
+
+.pinboard__surface {
+  position: absolute;
+  inset: 0;
+  background: var(--color-floor);
+  border: var(--stroke-4) solid var(--color-ink);
+  border-radius: 6px;
+}
+
+.pinboard__note {
+  top: 7px;
+}
+
+.pinboard__note--about {
+  left: 7px;
+}
+
+.pinboard__note--skills {
+  left: 78px;
+}
+
+.pinboard__note--contact {
+  left: 149px;
+}

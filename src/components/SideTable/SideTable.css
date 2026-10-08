@@ -1,0 +1,36 @@
+.side-table {
+  position: absolute;
+  left: 508px;
+  top: 636px;
+  width: 100px;
+  height: 160px;
+}
+
+.side-table__top {
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 22px;
+}
+
+.side-table__stem {
+  position: absolute;
+  left: 44px;
+  top: 18px;
+  width: 12px;
+  height: 100px;
+  background: var(--color-wood);
+  border: var(--stroke-4) solid var(--color-ink);
+}
+
+.side-table__base {
+  left: 16px;
+  top: 115px;
+  width: 68px;
+  height: 16px;
+}
+
+.side-table__mug {
+  left: 28px;
+  top: -36px;
+}
